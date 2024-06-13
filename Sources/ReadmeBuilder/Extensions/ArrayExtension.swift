@@ -5,7 +5,7 @@
 
 import Foundation
 
-extension Array: MARKDOWN where Element == MARKDOWN {
+extension Array: MarkdownProtocol where Element == MarkdownProtocol {
     
     public func generateMarkdown() -> String {
         map { $0.generateMarkdown() }.joined()

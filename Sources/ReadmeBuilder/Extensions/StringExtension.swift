@@ -5,7 +5,7 @@
 
 import Foundation
 
-extension String: MARKDOWN {
+extension String: MarkdownProtocol {
     
     public func generateMarkdown() -> String {
         self

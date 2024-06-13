@@ -5,6 +5,6 @@
 
 import Foundation
 
-public protocol MARKDOWN {
+public protocol MarkdownProtocol {
     func generateMarkdown() -> String
 }

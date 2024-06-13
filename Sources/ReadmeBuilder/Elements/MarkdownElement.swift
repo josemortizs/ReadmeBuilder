@@ -5,12 +5,12 @@
 
 import Foundation
 
-public struct Markdown: MARKDOWN {
+public struct Markdown: MarkdownProtocol {
     
-    var content: [MARKDOWN]
+    var content: [MarkdownProtocol]
 
     public init(
-        @MARKDOWNBuilder contents: () -> [MARKDOWN]
+        @MARKDOWNBuilder contents: () -> [MarkdownProtocol]
     ) {
         self.content = contents()
     }

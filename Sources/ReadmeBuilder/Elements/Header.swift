@@ -5,7 +5,7 @@
 
 import Foundation
 
-public struct Header: MARKDOWN {
+public struct Header: MarkdownProtocol {
 
     private var type: HeaderType
     private var text: String
