@@ -16,7 +16,7 @@ public struct Header: MarkdownProtocol {
     }
     
     public func generateMarkdown() -> String {
-        "\(type.rawValue)\(text)  \n"
+        "\(type.rawValue)\(text)  \n\n"
     }
 }
 
