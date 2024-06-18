@@ -37,6 +37,31 @@ public struct Readme: DocumentProtocol {
             
             Text("Blockquote { \"Esto es una cita en bloque...\" }")
             Blockquote { "Esto es una cita en bloque..." }
+            
+            Header("Texto plano:")
+                .type(.header3)
+            
+            """
+            La extensión de String para que implemente el protocolo MarkdownProtocol permite
+            que podamos agregar textos directamente, usando la sintaxis de String multilínea
+            estándar en el lenguaje Swift
+            """
+            
+            Code {
+                """
+                import Foundation
+
+                extension String: MarkdownProtocol {
+                    
+                    public func generateMarkdown() -> String {
+                        self.appending("  \\n")
+                    }
+                }
+                """
+            }
+            .language(.swift)
+            
+            
         }
     }
 }

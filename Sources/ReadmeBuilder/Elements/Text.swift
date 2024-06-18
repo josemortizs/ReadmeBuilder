@@ -5,7 +5,7 @@
 
 import Foundation
 
-struct Text: MarkdownProtocol {
+public struct Text: MarkdownProtocol {
     
     private var fontWeight: FontWeightType
     private var text: String

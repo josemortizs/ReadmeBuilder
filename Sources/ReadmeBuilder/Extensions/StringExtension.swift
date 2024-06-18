@@ -8,6 +8,6 @@ import Foundation
 extension String: MarkdownProtocol {
     
     public func generateMarkdown() -> String {
-        self
+        self.appending("  \n")
     }
 }
