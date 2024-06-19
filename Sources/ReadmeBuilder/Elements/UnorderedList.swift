@@ -1,11 +1,11 @@
 //
-//  OrderedList.swift
-//  Created by Jose Manuel Ortiz Sanchez on 18/6/24.
+//  UnorderedList.swift
+//  Created by Jose Manuel Ortiz Sanchez on 19/6/24.
 //
 
 import Foundation
 
-public struct OrderedList: MarkdownProtocol {
+public struct UnorderedList: MarkdownProtocol {
     
     private var content: [String]
     
@@ -17,7 +17,7 @@ public struct OrderedList: MarkdownProtocol {
     
     public func generateMarkdown() -> String {
         content.map { item in
-            "1. ".appending(item).appending("\n")
+            "- ".appending(item).appending("\n")
         }
         .joined()
     }

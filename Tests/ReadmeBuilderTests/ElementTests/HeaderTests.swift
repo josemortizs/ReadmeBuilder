@@ -16,7 +16,7 @@ final class HeaderTests: XCTestCase {
 
     func testHeaderSimpleInit() throws {
         sut = Header("Esto es una cabecera")
-        let markdownText = "# Esto es una cabecera  \n"
+        let markdownText = "# Esto es una cabecera  \n\n"
         XCTAssertEqual(sut.generateMarkdown(), markdownText)
     }
 }

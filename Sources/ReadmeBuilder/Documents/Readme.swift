@@ -22,7 +22,9 @@ public struct Readme: DocumentProtocol {
             Header("Bloque de código:")
                 .type(.header3)
             
-            Text(code1)
+            Code(code1)
+                .language(.swift)
+            
             Code {
                 """
                     var body: some View {
@@ -35,7 +37,13 @@ public struct Readme: DocumentProtocol {
             Header("Citas en bloque:")
                 .type(.header3)
             
-            Text("Blockquote { \"Esto es una cita en bloque...\" }")
+            Code {
+                """
+                Blockquote { "Esto es una cita en bloque..." }
+                """
+            }
+            .language(.swift)
+            
             Blockquote { "Esto es una cita en bloque..." }
             
             Header("Texto plano:")
@@ -61,7 +69,31 @@ public struct Readme: DocumentProtocol {
             }
             .language(.swift)
             
+            Header("Listas ordenadas:")
+                .type(.header3)
             
+            Code(orderedListCode)
+                .language(.swift)
+            
+            OrderedList {
+                "First item"
+                "Second item"
+                "Third item"
+                "Fourth item"
+            }
+            
+            Header("Listas desordenadas:")
+                .type(.header3)
+            
+            Code(uorderedListCode)
+                .language(.swift)
+            
+            UnorderedList {
+                "First item"
+                "Second item"
+                "Third item"
+                "Fourth item"
+            }
         }
     }
 }
@@ -86,4 +118,27 @@ extension Readme {
         .language(.swift)
         """
     }
+    
+    var orderedListCode: String {
+        """
+        OrderedList {
+            "First item"
+            "Second item"
+            "Third item"
+            "Fourth item"
+        }
+        """
+    }
+    
+    var uorderedListCode: String {
+        """
+        UnorderedList {
+            "First item"
+            "Second item"
+            "Third item"
+            "Fourth item"
+        }
+        """
+    }
+    
 }

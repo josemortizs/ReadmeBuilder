@@ -5,6 +5,7 @@ ReadmeBuilder es un paquete de Swift que permite a los desarrolladores crear arc
 
 ### Bloque de código:  
 
+```swift
 Code {
     """
         var body: some View {
@@ -12,7 +13,9 @@ Code {
         }
     """
 }
-.language(.swift)  
+.language(.swift)
+```
+
 ```swift
     var body: some View {
         Text("Hola mundo!")
@@ -21,5 +24,54 @@ Code {
 
 ### Citas en bloque:  
 
-Blockquote { "Esto es una cita en bloque..." }  
+```swift
+Blockquote { "Esto es una cita en bloque..." }
+```
+
 > Esto es una cita en bloque...  
+### Texto plano:  
+
+La extensión de String para que implemente el protocolo MarkdownProtocol permite
+que podamos agregar textos directamente, usando la sintaxis de String multilínea
+estándar en el lenguaje Swift  
+```swift
+import Foundation
+
+extension String: MarkdownProtocol {
+    
+    public func generateMarkdown() -> String {
+        self.appending("  \n")
+    }
+}
+```
+
+### Listas ordenadas:  
+
+```swift
+OrderedList {
+    "First item"
+    "Second item"
+    "Third item"
+    "Fourth item"
+}
+```
+
+1. First item
+1. Second item
+1. Third item
+1. Fourth item
+### Listas desordenadas:  
+
+```swift
+UnorderedList {
+    "First item"
+    "Second item"
+    "Third item"
+    "Fourth item"
+}
+```
+
+- First item
+- Second item
+- Third item
+- Fourth item

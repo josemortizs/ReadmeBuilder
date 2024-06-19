@@ -19,7 +19,6 @@ public struct Blockquote: MarkdownProtocol {
         content.map { tag in
             "> "
                 .appending(tag.generateMarkdown())
-                .appending("  ")
         }
         .joined()
     }

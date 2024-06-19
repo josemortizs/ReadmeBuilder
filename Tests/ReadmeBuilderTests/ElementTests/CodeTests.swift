@@ -32,7 +32,7 @@ final class CodeTests: XCTestCase {
             var body: some View {
                 Text("Hola mundo!")
             }
-            ```
+            ```\n\n
             """
         
         XCTAssertEqual(sut.generateMarkdown(), markdownText)
@@ -47,7 +47,7 @@ final class CodeTests: XCTestCase {
             var body: some View {
                 Text("Hola mundo!")
             }
-            ```
+            ```\n\n
             """
         
         XCTAssertEqual(sut.generateMarkdown(), markdownText)

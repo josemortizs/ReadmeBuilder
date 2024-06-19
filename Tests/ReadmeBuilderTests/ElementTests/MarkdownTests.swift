@@ -22,8 +22,8 @@ final class MarkdownTests: XCTestCase {
         }
         let markdownText = 
         """
-        # Esto es una cabecera h1\u{0020}\u{0020}
-        ## Esto es una cabecera h2\u{0020}\u{0020}\n
+        # Esto es una cabecera h1\u{0020}\u{0020}\n
+        ## Esto es una cabecera h2\u{0020}\u{0020}\n\n
         """
         XCTAssertEqual(sut.generateMarkdown(), markdownText)
     }
