@@ -94,6 +94,18 @@ public struct Readme: DocumentProtocol {
                 "Third item"
                 "Fourth item"
             }
+            
+            Header("Images")
+            
+            Code {
+                """
+                ImagePath(path: "../Assets/images/tux.png")
+                    .textAlt("Tux, the Linux mascot")
+                """
+            }
+            
+            ImagePath(path: "../Assets/images/tux.png")
+                .textAlt("Tux, the Linux mascot")
         }
     }
 }

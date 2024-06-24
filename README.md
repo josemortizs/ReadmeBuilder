@@ -75,3 +75,11 @@ UnorderedList {
 - Second item
 - Third item
 - Fourth item
+# Images  
+
+```
+ImagePath(path: "../Assets/images/tux.png")
+    .textAlt("Tux, the Linux mascot")
+```
+
+![Tux, the Linux mascot](../Assets/images/tux.png)  
