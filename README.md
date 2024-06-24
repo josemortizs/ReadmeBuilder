@@ -82,4 +82,4 @@ ImagePath(path: "../Assets/images/tux.png")
     .textAlt("Tux, the Linux mascot")
 ```
 
-![Tux, the Linux mascot](assets/images/tux.png)  
+![Tux, the Linux mascot](Assets/images/tux.png)  
