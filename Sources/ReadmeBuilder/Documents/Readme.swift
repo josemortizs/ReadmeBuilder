@@ -69,6 +69,20 @@ public struct Readme: DocumentProtocol {
             }
             .language(.swift)
             
+            Header("Texto con tachados:")
+                .type(.header3)
+            
+            Code {
+                """
+                Text("The world is flat. We now know that the world is round.")
+                    .strikethroughText("The world is flat.")
+                """
+            }
+            .language(.swift)
+            
+            Text("The world is flat. We now know that the world is round.")
+                .strikethroughText("The world is flat.")
+            
             Header("Listas ordenadas:")
                 .type(.header3)
             

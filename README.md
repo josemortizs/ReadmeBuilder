@@ -45,6 +45,14 @@ extension String: MarkdownProtocol {
 }
 ```
 
+### Texto con tachados:  
+
+```swift
+Text("The world is flat. We now know that the world is round.")
+    .strikethroughText("The world is flat.")
+```
+
+~~The world is flat.~~ We now know that the world is round.  
 ### Listas ordenadas:  
 
 ```swift
@@ -82,4 +90,4 @@ ImagePath(path: "../Assets/images/tux.png")
     .textAlt("Tux, the Linux mascot")
 ```
 
-![Tux, the Linux mascot](Assets/images/tux.png)  
+![Tux, the Linux mascot](../Assets/images/tux.png)  

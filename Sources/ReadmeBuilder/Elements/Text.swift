@@ -9,14 +9,20 @@ public struct Text: MarkdownProtocol {
     
     private var fontWeight: FontWeightType
     private var text: String
+    private var strikethroughText: String
+    
+    private var textFormatted: String {
+        text.replacingOccurrences(of: strikethroughText, with: "~~\(strikethroughText)~~")
+    }
     
     public init(_ text: String) {
         self.fontWeight = .none
         self.text = text
+        self.strikethroughText = ""
     }
     
     public func generateMarkdown() -> String {
-        "\(fontWeight.rawValue)\(text)\(fontWeight.rawValue)  \n"
+        "\(fontWeight.rawValue)\(textFormatted)\(fontWeight.rawValue)  \n"
     }
 }
 
@@ -43,6 +49,12 @@ extension Text {
     public func fontWeight(_ fontWeight: FontWeightType) -> Text {
         var text = self
         text.fontWeight = fontWeight
+        return text
+    }
+    
+    public func strikethroughText(_ strikethroughText: String) -> Text {
+        var text = self
+        text.strikethroughText = strikethroughText
         return text
     }
 }

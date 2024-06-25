@@ -45,4 +45,11 @@ final class TextTests: XCTestCase {
         let markdownText = "**Esto es un texto en negrita**  \n"
         XCTAssertEqual(sut.generateMarkdown(), markdownText)
     }
+    
+    func testStrikethroughTextText() throws {
+        sut = Text("The world is flat. We now know that the world is round.")
+                .strikethroughText("The world is flat.")
+        let markdownText = "~~The world is flat.~~ We now know that the world is round.  \n"
+        XCTAssertEqual(sut.generateMarkdown(), markdownText)
+    }
 }
